@@ -1,0 +1,19 @@
+﻿using Expense_Tracker_API.Entity;
+
+namespace Expense_Tracker_API.Services.Interface
+{
+    public interface ICategoryService
+    {
+        Task<IEnumerable<Category>> Get(int id);
+
+        //Task<IEnumerable<CategorySpend>> GetCategorySpend(int id);
+
+        Task<Category> GetByID(int id);
+
+        Task<string> Add(Category entity);
+
+        Task<string> Edit(Category entity);
+
+        Task<string> Delete(int id);
+    }
+}
